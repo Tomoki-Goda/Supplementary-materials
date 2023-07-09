@@ -8,7 +8,7 @@ Quit[]
 (**)
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Set up *)
 
 
@@ -46,14 +46,14 @@ Import["Initialize.wl"]
 Protect[name,numberofparticles,deltaterm,order,zval,factor,epspow,bar];
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*Pre-run set up *)
 
 
-(*LaunchKernels[8]
+LaunchKernels[8]
 SetSharedVariable[ShareAssum]
 ShareAssum=$Assumptions
-ParallelEvaluate[$Assumptions=ShareAssum];*)
+ParallelEvaluate[$Assumptions=ShareAssum];
 <<InputSetup`
 
 
@@ -88,7 +88,7 @@ selectors/.ReplT2Sp/.ReplEn2Sp//.Replp;
 tselectors=sel/@%;
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Prepare*)
 
 
@@ -144,7 +144,7 @@ Print["Decomposed"];
 processed0=Map[Process[#,x5]&,decomposed,{2}];
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Extract Scaling*)
 
 
@@ -245,7 +245,7 @@ Print[countall];
 (*CloseKernels[]*)
 
 
-LaunchKernels[8]
+(*LaunchKernels[8]*)
 
 
 sample=Table[i,{i,16,Length[tselectors]}]
@@ -510,7 +510,7 @@ Print["End All " ,Date[]];
 logdir
 
 
-(* ::Title:: *)
+(* ::Title::Closed:: *)
 (*Results of integrals*)
 
 
@@ -570,14 +570,3 @@ logdir
 (*Close[resfile]*)
 (**)
 (**)
-
-
-(* ::InheritFromParent:: *)
-(*9.313021655141554` +2.2233279821811296`/ep^2+5.2336281210922015` Lp+4.446655964362259` Lp^2+(2.6168140605461008` +4.446655964362259` Lp)/ep+ep (14.463608063460464` +6.972189449576905` Lp-4.946811827899725` Lp^2)+ep^2 (23.977446360378053` +41.89188498837272` Lp+18.297716127717134` Lp^2)*)
-
-
-(* ::InheritFromParent:: *)
-(*9.313021655141554` +2.2233279821811296`/ep^2+5.2336281210922015` Lp+4.446655964362259` Lp^2+(2.6168140605461008` +4.446655964362259` Lp)/ep+ep (14.463608063460464` +6.972189449576905` Lp-4.946811827899725` Lp^2)+ep^2 (23.977446360378053` +41.89188498837272` Lp+18.297716127717134` Lp^2)*)
-
-
-
