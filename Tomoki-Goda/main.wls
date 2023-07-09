@@ -88,7 +88,7 @@ selectors/.ReplT2Sp/.ReplEn2Sp//.Replp;
 tselectors=sel/@%;
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*Prepare*)
 
 
@@ -144,7 +144,7 @@ Print["Decomposed"];
 processed0=Map[Process[#,x5]&,decomposed,{2}];
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*Extract Scaling*)
 
 
@@ -179,7 +179,7 @@ Do[fi=OpenWrite[logdir<> "/repl"<>name<>ToString[primarysector]<>".m"];
 
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*Additional scaling (for loops)*)
 
 
@@ -243,12 +243,10 @@ Print[countall];
 
 
 (*CloseKernels[]*)
-
-
 (*LaunchKernels[8]*)
 
 
-sample=Table[i,{i,16,Length[tselectors]}]
+sample=Table[i,{i,1,Length[tselectors]}]
 (*sample={37}*)
 
 
@@ -363,7 +361,7 @@ For[smplno=startnumber,smplno<=Length[sample],smplno++,(*Loop over primary secto
 
 
 
-(* ::Title::Closed:: *)
+(* ::Title:: *)
 (*Prepare C++ codes for integrals*)
 
 

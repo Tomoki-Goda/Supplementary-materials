@@ -26,7 +26,7 @@ Begin["`Private`"];*)
 (*Master Function*)
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Old*)
 
 
@@ -120,7 +120,7 @@ Return[{assocprocessed,inteprocessed}]
 ];
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*integrate*)
 
 
@@ -215,7 +215,7 @@ ProcessIntegrand[assoc_, inte_, appow_, eppow_] := Module[{intkey, newinte, newa
 
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*AssocFullLog*)
 
 
@@ -383,8 +383,10 @@ ExpandIntegralFull[integral_,phi_,appower_,eppower_]:=Module[{int=integral,epow,
 int=Normal[Series[int,{ap,0,appower},{ep,0,eppower}]];
 
 (*Apply decomposition in phi as in Czakon & Haymes 's paper*)
-Print[int];
-Print[phi];
+If[VerboseFunctions>=2,
+	Print[int];
+	Print[phi];
+];
 If[phi=!={},
 int=int/.W[a___]:>dW[-2 ep,phi]W[a,Cos[phi]]/.RepldW,
 int=int/.W[a___]:>W[a,1]
@@ -591,7 +593,7 @@ Return[repall];
 (**)
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*ApplyTrivial*)
 
 
@@ -612,7 +614,7 @@ AppendTo[newinte,inte[[i]]//.repl];
 Return[{newassoc,newinte}]];
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*ReplaceSomec*)
 
 
