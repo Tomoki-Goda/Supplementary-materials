@@ -7,6 +7,7 @@ Quit[]
 (* ::Text:: *)
 (*This file can be used to generate splitting patterns for The SecDec function in SecDecV4.wl. *)
 (*The resulting lists contain pairs of variables which need to be decomposed.*)
+(*{x_1,x_2} means decomposition {x1->x1 x2,x2->x1 x2}. *)
 (**)
 
 
@@ -140,7 +141,6 @@ types/@inputraw[[positions]]
 
 (* ::Section:: *)
 (*Parametrize, Find overlaps and decompose*)
-
 
 
 appeartrig=DeleteDuplicates[Cases[#,Cos[_]|Sin[_]|Csc[_]|Sec[_],-1]]&/@prepared;
