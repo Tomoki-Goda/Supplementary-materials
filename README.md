@@ -9,4 +9,4 @@ GenerateSecDec.wls is used to analyse prpagators to generate decomposition patte
 
 Selector.wls generate selector functions.
 
-Once all integration files are ready, run Parni-Integrate.sh, there you need to respond to questions by giving directory of the log files and number of primary sectors.
+Once all integration files are ready, run Parni-Integrate.sh, there you need to respond to questions by providing the directory of the log files and number of the primary sectors.
